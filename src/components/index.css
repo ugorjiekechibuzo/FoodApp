@@ -1,0 +1,176 @@
+
+  /* Pre-CSS */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  overflow-x: hidden;
+  background-color: #FFF;
+
+}
+
+body,
+button,
+input{
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #333;
+}
+
+ul{
+  list-style: none;
+}
+li a {
+  text-decoration: none;
+}
+
+.container{
+  max-width: 1030px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+  column-gap: 0.6rem;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 7rem;
+  width: 100%;
+  z-index: 100;
+  transition: 0.5s;
+  background-color: #C87E4F;
+}
+
+.nav{
+  position: relative;
+  height: 100%;
+  align-items:center;
+  justify-content: space-between;
+}
+
+.logo-icon,
+.logo-text,
+.nav-link,
+.phone-icon,
+.phone-number{
+  color: #FFF;
+}
+
+
+.logo-icon,
+.phone-icon{
+  font-size: 2rem;
+}
+
+.menu-list{
+  column-gap: 2rem;
+}
+
+.nav-link{
+  position: relative;
+  text-transform: capitalize;
+}
+
+/* .nav-link::before{
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  height: 6px;
+  width: 6px;
+  background-color: var(--white-color);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+} */
+
+.active-navlink::before{
+  opacity: 1;
+}
+
+.header-active .active-navlink::before{
+  background-color: #333;
+}
+
+.media-icons a{
+  color: #888682;
+}
+
+.navClose-btn,
+.navOpen-btn,
+.media-icons{
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-content{
+    display: none;
+  }
+
+.navClose-btn,
+.navOpen-btn,
+.media-icons{
+  display: block;
+}
+
+
+.nav .menu-content{
+  position: fixed;
+  top: 0;
+  right: -100%;
+  max-width: 300px;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  padding: 10rem 0 5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.5s;
+  background-color: #C87E4F;
+}
+
+.nav .menu-content.open{
+  right: 0;
+}
+
+.menu-list{
+  flex-direction: column;
+  row-gap: 2rem;
+  font-size: 1.6rem;
+}
+
+.nav-link::before{
+  background-color: #333;
+}
+
+.navClose-btn{
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.navOpen-btn{
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #FFF;
+}
+
+.header-active .navOpen-btn{
+  color: #333;
+}
+}
