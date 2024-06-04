@@ -28,7 +28,7 @@ li a {
 }
 
 .container{
-  max-width: 1030px;
+  /* max-width: 1030px; */
   width: 100%;
   margin: 0 auto;
   padding: 0 3rem;
@@ -41,7 +41,7 @@ li a {
 }
 
 header{
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
   height: 7rem;
@@ -66,6 +66,9 @@ header{
   color: #FFF;
 }
 
+.logo-content{
+  text-decoration: none;
+}
 
 .logo-icon,
 .phone-icon{
