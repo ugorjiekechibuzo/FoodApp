@@ -21,7 +21,7 @@ export default function Home() {
           onChange={(e) => setSearchParam(e.target.value)}
           type="text"
           name="search"
-          placeholder="Search Food Any Food ....."
+          placeholder="Search For Any Food ....."
          />
         </form>
       </section>

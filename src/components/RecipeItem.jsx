@@ -1,12 +1,13 @@
 import React from 'react'
+import './index.css'
 
 const RecipeItem = ({item}) => {
 
   console.log(item)
   return (
     <>
-    <div>
-      <div>
+    <section className="recipe-container">
+      <div className="img-container">
       <img src={item?.image_url} alt= "recipe item"/>
       </div>
       <div>
@@ -18,7 +19,7 @@ const RecipeItem = ({item}) => {
         </h3>
       </div>
 
-    </div>
+    </section>
     </>
   )
 }
