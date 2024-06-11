@@ -6,7 +6,9 @@ const GlobalState = ({children}) => {
   const [searchParam, setSearchParam] = useState("")
   const [loading, setLoading] = useState(false);
   const [recipeList, setRecipeList] = useState([]);
-
+  const [recipeDetailsData, setRecipeDetailsData] = useState(null);
+  const [favoritesList, setFavoritesList] = useState([])
+ 
   async function handleSubmit(e){
     e.preventDefault();
 
@@ -21,7 +23,7 @@ const GlobalState = ({children}) => {
         setLoading(false);
         setSearchParam("");
       }
-      
+
 
 
 
@@ -33,12 +35,25 @@ const GlobalState = ({children}) => {
   }
 
 
+  const handleAddToFavorite = (currentItem) =>{
+    let addToFavoriteList = [...favoritesList];
+    const index = addToFavoriteList.findIndex(item => item.id === currentItem.id)
+
+    if(index === -1){
+    addToFavoriteList.push(currentItem)
+   }else{
+    addToFavoriteList.splice(index)
+   }
+
+   setFavoritesList(addToFavoriteList)
+  }
+
 
   return (
 
 
     <GlobalContext.Provider
-    value={{searchParam, setSearchParam, handleSubmit, loading, recipeList}}
+    value={{searchParam, setSearchParam, handleSubmit, loading, recipeList, recipeDetailsData, setRecipeDetailsData, favoritesList, handleAddToFavorite}}
     >
       {children}
     </GlobalContext.Provider>

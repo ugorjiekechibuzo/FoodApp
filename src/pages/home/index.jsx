@@ -1,4 +1,3 @@
-import React from 'react'
 import "./index.css"
 import {useContext} from "react"
 import {GlobalContext} from "../../context/GlobalState"
@@ -9,6 +8,7 @@ import RecipeItem from "../../components/RecipeItem"
 export default function Home() {
 
   const {searchParam, setSearchParam, handleSubmit, recipeList, loading} = useContext(GlobalContext)
+
   if (loading) return <div>Searching...Please wait!</div>;
 
   return (
@@ -27,15 +27,16 @@ export default function Home() {
       </section>
 
       <section>
-        <div>
+        <div className="wrapper">
 
           {recipeList && recipeList.length > 0
 
           ?
 
-          ( recipeList.map((item) => <RecipeItem item={item}/> ))
+          (recipeList.map((item)  => <RecipeItem  key={item.id} item={item}/> ) )
+
           :
-           (<div>
+           (<div className="display-text">
             <p> Nothing to Display Now... Please Search Any Food of Choice</p>
             </div>
           )}

@@ -181,7 +181,7 @@ header{
 .recipe-container{
   display: flex;
   flex-direction: column;
-  width: 20rem;
+  /* width: 20rem; */
   overflow: hidden;
   padding: 1.25rem;
   background-color: rgba(255, 255, 255, 0.75);
@@ -189,6 +189,7 @@ header{
   border: 2px solid white;
   border-radius: 1rem;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  margin-top: 10px;
 }
 
 .img-container{
@@ -198,4 +199,40 @@ header{
   overflow: hidden;
   align-items: center;
   border-radius: 0.75rem;
+}
+
+.recipe-pic{
+  display: block;
+  width: 100%;
+}
+
+.recipe-text{
+  font-size: 0.875rem;
+  color: #0e7490;
+  font-weight: 500;
+}
+
+.recipe-title{
+  font-weight: bold;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: black;
+}
+
+.recipe-details {
+  font-size: 0.875rem; /* text-sm */
+  padding: 0.75rem; /* p-3 */
+  padding-left: 2rem; /* px-8 */
+  padding-right: 2rem; /* px-8 */
+  margin-top: 1.25rem; /* mt-5 */
+  border-radius: 0.5rem; /* rounded-lg */
+  text-transform: uppercase; /* uppercase */
+  font-weight: 500; /* font-medium */
+  letter-spacing: 0.05em; /* tracking-wider */
+  display: inline-block; /* inline-block */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+  background-color: black; /* bg-black */
+  color: white; /* text-white */
 }

@@ -9,3 +9,36 @@
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05), 0 0 15px 0 rgba(255, 0, 0, 0.1);
   transition: box-shadow 0.2s;
 }
+
+.wrapper{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 10px;
+  gap: 1rem;
+  padding: 1rem;
+  /* width: 100%;
+  min-width: 1030px;
+  overflow: hidden; */
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    grid-template-columns: 1fr; /* One column on small screens */
+  }
+}
+
+.display-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* text-center */
+  color: black; /* text-black */
+  font-weight: 800; /* font-extrabold */
+  font-size: 1.25rem; /* text-xl (extra-large text size, 20px) by default */
+}
+
+@media (min-width: 1024px) { /* lg:text-4xl (4xl text size for large screens) */
+  .display-text {
+    font-size: 2.25rem; /* 4xl (36px) */
+  }
+}
