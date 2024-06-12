@@ -11,16 +11,17 @@ const Favorites = () => {
  console.log(favoritesList)
 
  return (
-  <div className="wrapper">
+  <div >
 
     {favoritesList && favoritesList.length > 0
 
     ?
-
-    (favoritesList.map((item)  => <RecipeItem  key={item.id} item={item}/> ) )
+     (<div className="wrapper">
+    {(favoritesList.map((item)  => <RecipeItem  key={item.id} item={item}/> ) )}
+    </div>)
 
     :
-      (<div className= "">
+      (<div className= "display-text">
         <p> No Item Found</p>
       </div>
     )}
