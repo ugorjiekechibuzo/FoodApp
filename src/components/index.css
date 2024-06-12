@@ -221,7 +221,7 @@ header{
   color: black;
 }
 
-.recipe-details {
+.recipe-details-btn {
   font-size: 0.875rem; /* text-sm */
   padding: 0.75rem; /* p-3 */
   padding-left: 2rem; /* px-8 */
@@ -233,6 +233,7 @@ header{
   letter-spacing: 0.05em; /* tracking-wider */
   display: inline-block; /* inline-block */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
-  background-color: black; /* bg-black */
+  background-color: #C87E4F; /* bg-black */
   color: white; /* text-white */
+  text-decoration: none;
 }

@@ -4,7 +4,7 @@ import {Link} from "react-router-dom"
 
 const RecipeItem = ({item}) => {
 
-  
+
   return (
 
     <section className="recipe-container">
@@ -20,7 +20,7 @@ const RecipeItem = ({item}) => {
         </h3>
         <Link
           to={`/recipe-item/${item?.id}`}
-          className="recipe-details"
+          className="recipe-details-btn"
         >
           Recipe Details
         </Link>

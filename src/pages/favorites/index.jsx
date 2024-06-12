@@ -11,7 +11,7 @@ const Favorites = () => {
  console.log(favoritesList)
 
  return (
-  <div className="">
+  <div className="wrapper">
 
     {favoritesList && favoritesList.length > 0
 

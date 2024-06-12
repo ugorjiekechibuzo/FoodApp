@@ -40,12 +40,12 @@ export default function Details() {
         <h3 className="recipe-title">{recipeDetailsData?.recipe?.title}</h3>
         <div>
          <button className="details-button" onClick={() => {handleAddToFavorite(recipeDetailsData?.recipe)}}>
-           {favoritesList && favoritesList.length > 0 && favoritesList.findIndex((item) => item.id === recipeDetailsData?.recipe?.id ) !== -1 ? "Remove from favorites" : "Add to favorite" }
+           {favoritesList && favoritesList.length > 0 && favoritesList.findIndex((item) => item.id === recipeDetailsData?.recipe?.id ) !== -1 ? "Remove from favorites" : "Save As favorite" }
          </button>
         </div>
 
         <div>
-          <span>
+          <span className="ingredients">
             Ingredients:
           </span>
 

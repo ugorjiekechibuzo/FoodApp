@@ -5,6 +5,8 @@ import RecipeItem from "../../components/RecipeItem"
 
 
 
+
+
 export default function Home() {
 
   const {searchParam, setSearchParam, handleSubmit, recipeList, loading} = useContext(GlobalContext)
@@ -13,7 +15,7 @@ export default function Home() {
 
   return (
     <>
-      <section>
+      <section className="container-form">
         <form onSubmit={handleSubmit} >
          <input
           className="form"
@@ -27,14 +29,14 @@ export default function Home() {
       </section>
 
       <section>
-        <div className="wrapper">
+        <div >
 
           {recipeList && recipeList.length > 0
 
           ?
-
-          (recipeList.map((item)  => <RecipeItem  key={item.id} item={item}/> ) )
-
+           (<div className="wrapper">
+          {(recipeList.map((item)  => <RecipeItem  key={item.id} item={item}/> ) )}
+           </div>)
           :
            (<div className="display-text">
             <p> Nothing to Display Now... Please Search Any Food of Choice</p>
