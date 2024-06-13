@@ -1,6 +1,5 @@
 
 import './index.css'
-import {useSate} from 'react';
 import {Link} from "react-router-dom";
 
 
@@ -11,7 +10,7 @@ const Navbar = () => {
   function handleHamburgerClick(){
 
 
-     const body = document.querySelector("body");
+   const body = document.querySelector("body");
    const navMenu = document.querySelector(".menu-content");
 
     if(navMenu.classList.contains("open")){

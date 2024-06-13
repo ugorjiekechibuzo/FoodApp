@@ -1,5 +1,6 @@
 
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer"
 // import FormInput from "./components/FormInput";
 // import {Routes, Route, createBrowserRouter,createRoutesFromElements, RouterProvider} from "react-router-dom";
 import Home from "./pages/home/index";
@@ -30,6 +31,7 @@ const App = () => {
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/recipe-item/:id" element={<Details />} />
       </Routes>
+      <Footer />
     </Router>
     </>
   )

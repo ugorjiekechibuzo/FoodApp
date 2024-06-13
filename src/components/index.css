@@ -11,13 +11,11 @@ body{
 
 }
 
-body,
-button,
-input{
+body{
   font-family: 'Poppins', sans-serif;
-  font-size: 1.5rem;
   font-weight: 400;
-  color: #333;
+  /* color: #333; */
+
 }
 
 ul{
@@ -44,11 +42,12 @@ header{
   position: sticky;
   top: 0;
   left: 0;
-  height: 7rem;
+  height: 5rem;
   width: 100%;
   z-index: 100;
   transition: 0.5s;
   background-color: #C87E4F;
+  font-size: 1.5rem;
 }
 
 .nav{
@@ -106,7 +105,8 @@ header{
 }
 
 .media-icons a{
-  color: #888682;
+  /* color: #888682; */
+  padding: 8px;
 }
 
 .navClose-btn,
@@ -236,4 +236,162 @@ header{
   background-color: #C87E4F; /* bg-black */
   color: white; /* text-white */
   text-decoration: none;
+}
+
+footer{
+  /* position: fixed; */
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  background: #C87E4F;
+  margin-top: 20px;
+  /* height: 15rem */
+}
+
+.main-content{
+  display: flex;
+
+}
+
+.main-content .box{
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+
+.box h2{
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.box .content{
+  margin: 20px 0 0 0;
+  position: relative;
+}
+
+.box .content:after{
+  position: absolute;
+  content: " ";
+  height: 2px;
+  width: 15%;
+  background: #0e7490;
+  top: -10px;
+}
+
+.left .content p{
+  text-align: justify;
+}
+
+.left .content .social{
+  margin: 20px 0 0 0;
+}
+
+.left .content .social .bx{
+  padding: 0 2px;
+}
+
+.left .content .social i{
+  height: 40px;
+  width: 40px;
+  background: #C87E4F;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s
+}
+
+.left .content .social i:hover{
+  background: #1a1a1a;
+}
+
+.center .content .text{
+  font-size: 1.0625rem;
+  font-weight: 500;
+  padding-left: 10px;
+}
+
+.center .content .phone{
+  margin: 15px 0;
+}
+
+.right form .text{
+  font-size: 1.0625rem;
+  margin-bottom: 2px;
+  color: #656565;
+}
+
+.right form .msg{
+  margin-top: 10px;
+}
+
+.right form input, .right form textarea{
+  width: 100%;
+  font-size: 1.0625rem;
+  background: #151515;
+  padding-left: 10px;
+  border: 1px solid #222222;
+}
+.right form input:focus,
+.right form textarea:focus{
+  outline-color: #3498db;
+}
+
+.right form input{
+  height: 35px;
+}
+
+.right form .btn{
+  margin-top: 10px;
+}
+
+.right form .btn button{
+  height: 40px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #3498db;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .3s;
+  color:white;
+  border-radius: 10px;
+}
+
+.right form .btn button:hover{
+  background: #000;
+}
+
+.bottom center{
+  padding: 5px;
+  font-size: 0.9375rem;
+  background: #151515;
+}
+
+.bottom center span{
+  color: #656565;
+}
+
+.bottom center a{
+  color: #f12020;
+  text-decoration: none;
+}
+
+.bottom center a:hover{
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 900px) {
+  footer{
+    position: relative;
+    bottom: 0px;
+  }
+  .main-content{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .main-content .box{
+    margin: 5px 0;
+  }
 }

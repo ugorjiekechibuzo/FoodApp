@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <section className="container-form">
-        <form onSubmit={handleSubmit} >
+        <form onSubmit={handleSubmit}  className="home-form">
          <input
           className="form"
           value={searchParam}
